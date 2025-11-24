@@ -2,13 +2,17 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Transform rayStart;
+
     Rigidbody rb;
     private bool isWalkingRight = true;
-
+    private Animator anim;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
+
     }
     private void FixedUpdate()
     {
@@ -23,6 +27,13 @@ public class PlayerMovement : MonoBehaviour
         {
             Switch();
         }
+
+        RaycastHit hit;
+        if(!Physics.Raycast(rayStart.position, -transform.up, out hit, Mathf.Infinity))
+        {
+            anim.SetTrigger("isFalling");
+        }
+
     }
     private void Switch()
     {
