@@ -42,6 +42,11 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetTrigger("isFalling");
         }
+        if(transform.position.y < -5f)
+        {
+            gameManager.EndGame();
+        }
+
 
     }
     private void Switch()
