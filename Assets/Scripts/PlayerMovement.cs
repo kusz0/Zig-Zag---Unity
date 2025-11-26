@@ -34,6 +34,10 @@ public class PlayerMovement : MonoBehaviour
     {
             if(Input.GetButtonDown("Jump"))
             {
+                if(!gameManager.isGameStarted)
+                {
+                    return;
+                }
                 Switch();
             }
 
@@ -41,8 +45,11 @@ public class PlayerMovement : MonoBehaviour
         if(!Physics.Raycast(rayStart.position, -transform.up, out hit, Mathf.Infinity))
         {
             anim.SetTrigger("isFalling");
+        }else
+        {
+            anim.SetTrigger("isRunning");
         }
-        if(transform.position.y < -5f)
+        if (transform.position.y < -5f)
         {
             gameManager.EndGame();
         }
