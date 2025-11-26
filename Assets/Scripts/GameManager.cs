@@ -4,7 +4,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public bool isGameStarted = false;
-    
+    public int score = 0;
+
     public void StartGame()
     {
         isGameStarted = true;
@@ -20,7 +21,10 @@ public class GameManager : MonoBehaviour
             StartGame();
         }
     }
-    
+    public void IncreaseScore()
+    {
+        score++;
+    }
     
 
 
