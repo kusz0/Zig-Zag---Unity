@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ac9e329c3de754f489edc3a907313bf6
+guid: 521ef69010595194cabc997cf1503ad2
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,12 +9,12 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - SPACE NOVA
+  - Pixel Game Extrude
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 1
+  useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1
   userData: 
   assetBundleName: 
