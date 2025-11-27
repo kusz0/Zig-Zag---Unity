@@ -24,8 +24,18 @@ public class GameManager : MonoBehaviour
     public void IncreaseScore()
     {
         score++;
+
+        if (score > GetHighScore())
+        {
+            PlayerPrefs.SetInt("BestScore", score);
+        }
     }
     
+    public int GetHighScore()
+    {
+        int bestScore = PlayerPrefs.GetInt("BestScore");
+        return bestScore;
+    }
 
 
 }
